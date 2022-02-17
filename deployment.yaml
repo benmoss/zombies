@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zombies
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zombies
+  template:
+    metadata:
+      labels:
+        app: zombies
+    spec:
+      containers:
+      - name: zombie
+        image: ko://zombies
+        ports:
+        - containerPort: 8080
