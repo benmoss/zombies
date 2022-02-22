@@ -1,8 +1,6 @@
-#@ load("@ytt:data", "data")
-
 apiVersion: v1
 kind: ConfigMap
 metadata:
   name: game-demo
 data:
-  secret: #@ data.read("token")
+  secret: cool
